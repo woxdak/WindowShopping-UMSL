@@ -13,6 +13,7 @@ import { DayService, WeekService, WorkWeekService, MonthService, AgendaService, 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { PartnerComponent } from './partner/partner.component';
+import { PresentationComponent } from './presentation/presentation.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PartnerComponent } from './partner/partner.component';
     BookingComponent,
     NavbarComponent,
     FooterComponent,
-    PartnerComponent
+    PartnerComponent,
+    PresentationComponent
   ],
   imports: [
     BrowserModule,
