@@ -1,0 +1,108 @@
+<div class="row mainfont"  id="Booking">
+    <div class="col navMenu">
+        <h1 class="text-center" > Appointment Booking</h1>
+    </div>
+  </div>
+
+<div>
+    <ejs-schedule  height='550px' 
+    [selectedDate]='selectedDate'
+    [eventSettings]='eventSettings'> </ejs-schedule>
+</div>
+<div class="text-center" [hidden]="!isDisplay">
+    <button class="btn btn-primary" (click)="display()">Make Appointment</button>
+</div>
+<div class="row" [hidden]="isDisplay">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+
+            <!-- <div class="form-group">
+                <label for="startTime"> Start Time</label>
+                <input 
+                    type="datetime-local" 
+                    id="startTime"
+                    class="form-control"
+                    ngModel
+                    name="startTime"
+                    required
+                    >
+            </div>
+            <div class="form-group">
+                <label for="endTime"> EndTime</label>
+                <input 
+                    type="datetime-local" 
+                    id="endTime"
+                    class="form-control"
+                    ngModel
+                    name="endTime"
+                    required
+                    >
+            </div> -->
+            <div class="form-group">
+                <label for="firstName"> First Name</label>
+                <input 
+                    type="text" 
+                    id="firstName"
+                    class="form-control"
+                    ngModel
+                    name="firstName"
+                    required
+                    >
+            </div>
+            <div class="form-group">
+                <label for="lastName"> Last Name</label>
+                <input 
+                    type="text" 
+                    id="lastName"
+                    class="form-control"
+                    ngModel
+                    name="lastName"
+                    required
+                    >
+            </div>
+            <div class="form-group">
+                <label for="cardNumber">Credit/ Debit Card</label>
+                <input 
+                    type="number" 
+                    id="cardNumber"
+                    class="form-control"
+                    ngModel
+                    name="cardNumber"
+                    required
+                    >
+            </div>
+            <div class="form-group">
+                <label for="CVV"> CVV</label>
+                <input 
+                    type="number" 
+                    id="CVV"
+                    class="form-control"
+                    ngModel
+                    name="CVV"
+                    required
+                    >
+            </div>
+            <div class="form-group">
+                <label for="expDate"> Expiration Date</label>
+                <input 
+                    type="number" 
+                    id="expDate"
+                    class="form-control"
+                    ngModel
+                    name="expDate"
+                    required
+                    >
+            </div>
+            
+            <div>
+                <button 
+                    class="btn btn-primary" 
+                    type="submit"
+                    [disabled]="!authForm.valid"
+                    [hidden]="isDisplay"
+                    (click)="display()">Make Payment</button>
+            </div>
+        </form>
+    </div>
+</div>
+<hr>
